@@ -32,8 +32,21 @@ public class Bot extends AppCompatActivity {
                 if (stuffin.contains("math"))
                 {
                     String helper = "What math course do you need help on?";
+                    if (stuffin.contains("Precalculus"))
+                    {
+                        String helper1 = "What topic in precalculus?";
+                    }
+                        if (stuffin.contains("right triangle")) {
 
-                }
+                            String helper2 = "Please take this test to help us help you.";
+                            String q1 = "What is the sin of 30 degrees?";
+                            if (stuffin.equals("0.5")){
+                                int countercorrect =  0;
+                                int counterincorrect = 0;
+                            String q1return = "That's correct!";
+                                countercorrect++;
+                        }
+                        }
             }
         });
 
