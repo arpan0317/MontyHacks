@@ -55,7 +55,7 @@
             android:background="@drawable/round_corner"
             android:backgroundTint="@color/colorAccent"
             android:padding="10dp"
-            android:text="What can I help you with?"
+            android:text="What can I help you with? Please pick from math, science, or english?"
             android:textColor="#FFFFFF" />
 
 
