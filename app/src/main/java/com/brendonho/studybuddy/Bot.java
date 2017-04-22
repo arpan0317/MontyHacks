@@ -5,11 +5,14 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.AbsListView;
 import android.widget.ListView;
+import android.database.DataSetObserver;
 
 import java.util.List;
 
 public class Bot extends AppCompatActivity {
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,6 +22,8 @@ public class Bot extends AppCompatActivity {
         ListView listView = (ListView) findViewById(R.id.listview);
         final EditText stuff = (EditText) findViewById(R.id.editText);
         Button send = (Button) findViewById(R.id.button);
+
+
 
         send.setOnClickListener(new View.OnClickListener() {
             @Override
