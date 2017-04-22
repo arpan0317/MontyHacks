@@ -41,8 +41,33 @@ public class Bot extends AppCompatActivity {
                     case "science": helper1234 = "What science course?";
                         bot.setText(helper1234);
                         break;
-
+                    case "english": helper1234 = "What topic in english?";
+                        bot.setText(helper1234);
+                        break;
+                    default:helper1234 = "Not understood";
+                        break;
                 }
+
+                if (helper1234.equals("What math course?"))
+                {
+                    String helper123 = " ";
+                    switch (stuffin){
+                        case "precalculus": helper123 = "What precalculus course?";
+                            bot.setText(helper123);
+                            break;
+                        case "al2": helper123 = "What al2 course?";
+                            bot.setText(helper123);
+                            break;
+                        case "geo": helper123 = "What topic in geo?";
+                            bot.setText(helper123);
+                            break;
+                        default:helper123 = "Not understood";
+                            break;
+                    }
+                }
+
+
+
 
 
 
