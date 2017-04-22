@@ -257,11 +257,11 @@ public class Bot extends AppCompatActivity {
                         stuff.setText("");
                         break;
                     case "feedback":
-                        bot.setText("You showed strength in identifing special right triangles in the unit circle. However you lack knowledge in things like arcsin");
+                        bot.setText("You showed strength in identifing special right triangles in the unit circle. However you can work on questions involving acrsin, arccos, and arctan.");
                     default:
-                        String one = "Sorry, I can't help you";
+                        String one = "Sorry, I can't help you. Please enter a valid command";
                         String two = "I'm not sure I understand";
-                        String three = "State a valid command";
+                        String three = "Please state a valid command";
                         double rand = Math.random();
                         if(rand <= 0.33){
                             bot.setText(one);

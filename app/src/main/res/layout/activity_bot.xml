@@ -61,7 +61,7 @@
             android:backgroundTint="#009688"
             android:padding="20dp"
             android:textSize="17dp"
-            android:text="What can I help you with? Please pick from math, science, or english?"
+            android:text="What can I help you with? Please pick from math, science, or english."
             android:textColor="#FFFFFF" />
 
 
