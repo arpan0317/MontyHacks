@@ -29,6 +29,7 @@ public class Bot extends AppCompatActivity {
         Button send = (Button) findViewById(R.id.button);
         final TextView you = (TextView) findViewById(R.id.you);
         final TextView bot = (TextView) findViewById(R.id.bot);
+        final String link = "Here";
 
 
 
@@ -289,13 +290,22 @@ public class Bot extends AppCompatActivity {
                         stuff.setText("");
                         break;
                     case "sqrt4":
-                        bot.setText("Incorrect. Tangent is opposite over adjacent. On the special right triangle, the sides are 1 as the shortest side, square root 3 as the middle side, and 2 for the hypotenuse. Since 60 degrees comes in between the short side and the hypotenuse, tangent over adjacent would give you square root 3 over 1.Type \"enter2\" for the next question." + );
+                        bot.setText("Incorrect. Tangent is opposite over adjacent. On the special right triangle, the sides are 1 as the shortest side, square root 3 as the middle side, and 2 for the hypotenuse. Since 60 degrees comes in between the short side and the hypotenuse, tangent over adjacent would give you square root 3 over 1.Type \"enter2\" for the next question.");
                         you.setText("sqrt3");
                         stuff.setText("");
                         break;
                     default:
-                        helper1234 = "Not understood";
-                        bot.setText(helper1234);
+                        String one = "Sorry, I can't help you";
+                        String two = "I'm not sure I understand";
+                        String three = "State a valid command";
+                        double rand = Math.random();
+                        if(rand <= 0.33){
+                            bot.setText(one);
+                        }else if(rand <= 0.66){
+                            bot.setText(two);
+                        }else{
+                            bot.setText(three);
+                        }
                         stuff.setText("");
                         break;
 
