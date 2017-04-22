@@ -33,15 +33,14 @@
         android:id="@+id/you"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_above="@+id/button"
+        android:layout_alignParentEnd="true"
         android:layout_marginBottom="39dp"
+        android:layout_marginEnd="12dp"
         android:background="@drawable/round_corner"
         android:backgroundTint="@color/colorPrimary"
         android:padding="10dp"
-        android:text="You"
-        android:textColor="#FFFFFF"
-        android:layout_above="@+id/button"
-        android:layout_alignParentEnd="true"
-        android:layout_marginEnd="12dp" />
+        android:textColor="#FFFFFF" />
 
     <TextView
         android:id="@+id/bot"
@@ -53,7 +52,6 @@
         android:background="@drawable/round_corner"
         android:backgroundTint="@color/colorAccent"
         android:padding="10dp"
-        android:text="Bot"
         android:textColor="#FFFFFF" />
 
 
