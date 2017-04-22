@@ -24,8 +24,15 @@ public class Bot extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 String stuffin = stuff.getText().toString();
+                if (stuffin.contains("math"))
+                {
+                    String helper = "What math course do you need help on?";
+
+                }
             }
         });
+
+
 
     }
 }
