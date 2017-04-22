@@ -7,25 +7,17 @@
     tools:context="com.brendonho.studybuddy.Bot">
 
 
-    <ListView
-        android:id="@+id/listview"
-        android:layout_width="match_parent"
-        android:layout_height="550dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:divider="@null"/>
-
     <EditText
         android:id="@+id/editText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_alignParentStart="true"
-        android:ems="10"
         android:layout_marginLeft="10dp"
-        android:inputType="textPersonName"
-        android:text="Name"
-        android:layout_toStartOf="@+id/button" />
+        android:layout_toStartOf="@+id/button"
+        android:ems="10"
+        android:hint="Say something"
+        android:inputType="textPersonName" />
 
     <Button
         android:id="@+id/button"
@@ -36,6 +28,33 @@
         android:layout_alignBaseline="@+id/editText"
         android:layout_alignBottom="@+id/editText"
         android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:id="@+id/you"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="39dp"
+        android:background="@drawable/round_corner"
+        android:backgroundTint="@color/colorPrimary"
+        android:padding="10dp"
+        android:text="You"
+        android:textColor="#FFFFFF"
+        android:layout_above="@+id/button"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="12dp" />
+
+    <TextView
+        android:id="@+id/bot"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/you"
+        android:layout_alignStart="@+id/editText"
+        android:layout_marginBottom="75dp"
+        android:background="@drawable/round_corner"
+        android:backgroundTint="@color/colorAccent"
+        android:padding="10dp"
+        android:text="Bot"
+        android:textColor="#FFFFFF" />
 
 
 </RelativeLayout>
