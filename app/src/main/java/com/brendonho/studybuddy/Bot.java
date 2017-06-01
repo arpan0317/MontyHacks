@@ -178,7 +178,7 @@ public class Bot extends AppCompatActivity {
                         break;
                     case ".5":
                         bot.setText("Correct. Type \"enter\" for next question.");
-                        stuff.setText("");
+                        stuff.setText("");  
                         break;
                     case "1/2":
                         bot.setText("Correct. Type \"enter\" for next question.");
@@ -258,6 +258,7 @@ public class Bot extends AppCompatActivity {
                         break;
                     case "feedback":
                         bot.setText("You showed strength in identifing special right triangles in the unit circle. However you can work on questions involving acrsin, arccos, and arctan.");
+                        break;
                     default:
                         String one = "Sorry, I can't help you. Please enter a valid command";
                         String two = "I'm not sure I understand";
