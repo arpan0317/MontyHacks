@@ -48,7 +48,28 @@ public class Bot extends AppCompatActivity {
                 String helper1234 = " ";
                 String corr = "Correct";
                 String incorr = "Incorrect";
-                switch (stuffin) {
+                if (stuffin.equalsIgnoreCase("Math")) {
+                    helper1234 = "What math course?";
+                    bot.setText(helper1234);
+                    stuff.setText("");
+                    if (stuffin.equalsIgnoreCase("precalc"))
+                    {
+                        helper1234 = "What precalc topic?";
+                        bot.setText(helper1234);
+                        stuff.setText("");
+                    }
+                } else if (stuffin.equalsIgnoreCase("Science")){
+                    helper1234 = "What science course?";
+                    bot.setText(helper1234);
+                    stuff.setText("");
+                } else if (stuffin.equalsIgnoreCase("English")){
+                    helper1234 = "What english course?";
+                    bot.setText(helper1234);
+                    stuff.setText("");
+                }
+
+                /**switch (stuffin) {
+
                     case "math":
                         helper1234 = "What math course?";
                         bot.setText(helper1234);
@@ -178,7 +199,7 @@ public class Bot extends AppCompatActivity {
                         break;
                     case ".5":
                         bot.setText("Correct. Type \"enter\" for next question.");
-                        stuff.setText("");  
+                        stuff.setText("");
                         break;
                     case "1/2":
                         bot.setText("Correct. Type \"enter\" for next question.");
@@ -274,7 +295,7 @@ public class Bot extends AppCompatActivity {
                         stuff.setText("");
                         break;
 
-                }
+                }*/
 
 
 
