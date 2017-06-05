@@ -89,10 +89,7 @@ public class Bot extends AppCompatActivity {
                     stuff.setText("");
                 }
 
-                if (stuffin.equalsIgnoreCase("right triangle")){
-                    
-                }
-
+               
 
 
 
