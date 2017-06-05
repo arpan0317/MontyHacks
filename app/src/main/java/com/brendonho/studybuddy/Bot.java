@@ -48,25 +48,55 @@ public class Bot extends AppCompatActivity {
                 String helper1234 = " ";
                 String corr = "Correct";
                 String incorr = "Incorrect";
+
                 if (stuffin.equalsIgnoreCase("Math")) {
-                    helper1234 = "What math course?";
+                    helper1234 = "What math course? Please pick from precalculus or geometry.";
                     bot.setText(helper1234);
                     stuff.setText("");
-                    if (stuffin.equalsIgnoreCase("precalc"))
-                    {
-                        helper1234 = "What precalc topic?";
-                        bot.setText(helper1234);
-                        stuff.setText("");
-                    }
                 } else if (stuffin.equalsIgnoreCase("Science")){
-                    helper1234 = "What science course?";
+                    helper1234 = "What science course? Please pick from chemistry or physics.";
                     bot.setText(helper1234);
                     stuff.setText("");
                 } else if (stuffin.equalsIgnoreCase("English")){
-                    helper1234 = "What english course?";
+                    helper1234 = "What english topic? Please pick from grammer or book";
                     bot.setText(helper1234);
                     stuff.setText("");
                 }
+
+                if (stuffin.equalsIgnoreCase("precalculus")) {
+                    helper1234 = "What precalculus topic?";
+                    bot.setText(helper1234);
+                    stuff.setText("");
+                } else if (stuffin.equalsIgnoreCase("geometry")){
+                    helper1234 = "What geometry topic?";
+                    bot.setText(helper1234);
+                    stuff.setText("");
+                } else if (stuffin.equalsIgnoreCase("chemistry")){
+                    helper1234 = "What chemistry topic?";
+                    bot.setText(helper1234);
+                    stuff.setText("");
+                } else if (stuffin.equalsIgnoreCase("physics")){
+                    helper1234 = "What physics topic?";
+                    bot.setText(helper1234);
+                    stuff.setText("");
+                } else if (stuffin.equalsIgnoreCase("grammer")){
+                    helper1234 = "What grammer topic?";
+                    bot.setText(helper1234);
+                    stuff.setText("");
+                } else if (stuffin.equalsIgnoreCase("book")){
+                    helper1234 = "What book?";
+                    bot.setText(helper1234);
+                    stuff.setText("");
+                }
+
+                if (stuffin.equalsIgnoreCase("right triangle")){
+                    
+                }
+
+
+
+
+
 
                 /**switch (stuffin) {
 
