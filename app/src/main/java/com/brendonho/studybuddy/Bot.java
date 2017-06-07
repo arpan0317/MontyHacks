@@ -89,7 +89,7 @@ public class Bot extends AppCompatActivity {
                     stuff.setText("");
                 }
 
-               
+
 
 
 
