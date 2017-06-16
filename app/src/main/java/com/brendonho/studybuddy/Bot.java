@@ -48,6 +48,7 @@ public class Bot extends AppCompatActivity {
                 String helper1234 = " ";
                 String corr = "Correct";
                 String incorr = "Incorrect";
+                Integer intin = Integer.valueOf(stuffin);
 
                 if (stuffin.equalsIgnoreCase("Math")) {
                     helper1234 = "What math course? Please pick from precalculus or geometry.";
@@ -88,7 +89,6 @@ public class Bot extends AppCompatActivity {
                     bot.setText(helper1234);
                     stuff.setText("");
                 }
-
 
 
 
