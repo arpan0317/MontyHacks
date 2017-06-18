@@ -51,7 +51,7 @@ public class Bot extends AppCompatActivity {
                 Integer intin = Integer.valueOf(stuffin);
 
                 if (stuffin.equalsIgnoreCase("Math")) {
-                    helper1234 = "What math course? Please pick from precalculus or geometry.";
+                    helper1234 = "What math course? Please pick from precalculus, geometry.";
                     bot.setText(helper1234);
                     stuff.setText("");
                 } else if (stuffin.equalsIgnoreCase("Science")){
