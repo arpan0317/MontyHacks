@@ -48,28 +48,26 @@ public class Bot extends AppCompatActivity {
                 String helper1234 = " ";
                 String corr = "Correct";
                 String incorr = "Incorrect";
-                Integer intin = Integer.valueOf(stuffin);
+                Boolean bol = false;
+                int counter = 0;
 
-                if (stuffin.equalsIgnoreCase("Math")) {
-                    helper1234 = "What math course? Please pick from precalculus, geometry.";
+
+           /*     if (stuffin.equalsIgnoreCase("Math")) {
+                    helper1234 = "What math course?";
                     bot.setText(helper1234);
                     stuff.setText("");
                 } else if (stuffin.equalsIgnoreCase("Science")){
-                    helper1234 = "What science course? Please pick from chemistry or physics.";
+                    helper1234 = "What science course? ";
                     bot.setText(helper1234);
                     stuff.setText("");
                 } else if (stuffin.equalsIgnoreCase("English")){
-                    helper1234 = "What english topic? Please pick from grammer or book";
+                    helper1234 = "What english topic?";
                     bot.setText(helper1234);
                     stuff.setText("");
                 }
 
                 if (stuffin.equalsIgnoreCase("precalculus")) {
                     helper1234 = "What precalculus topic?";
-                    bot.setText(helper1234);
-                    stuff.setText("");
-                } else if (stuffin.equalsIgnoreCase("geometry")){
-                    helper1234 = "What geometry topic?";
                     bot.setText(helper1234);
                     stuff.setText("");
                 } else if (stuffin.equalsIgnoreCase("chemistry")){
@@ -89,6 +87,113 @@ public class Bot extends AppCompatActivity {
                     bot.setText(helper1234);
                     stuff.setText("");
                 }
+
+                if (stuffin.equalsIgnoreCase("right " + "triangle")){
+                    helper1234 = "Please that this test to help us help you. "  +
+                            "What is the sin of 30 degrees? Please write in decimals.";
+                    bot.setText(helper1234);
+                    stuff.setText("");
+                }
+
+                if (stuffin.equalsIgnoreCase("0.5")){
+                    helper1234 = "That is correct. The next question is: What is the arcsin of 1? " +
+                            "Please enter your answer in degrees.";
+                    bot.setText(helper1234);
+                    stuff.setText("");
+                } else if (stuffin != null){
+                    helper1234 = "That is incorrect. The correct answer is 0.5. This is because sin is opposite over hypotenuse. " +
+                            "On the special right triangle, the sides are 1 as the shortest side, " +
+                            "square root 3 as the middle side, and 2 for the hypotenuse. " +
+                            "Since 30 degrees comes in between the middle side and the hypotenuse, " +
+                            "opposite over hypotenuse would give you 1/2 or 0.5. The next question is: What is the arcsin of 1?";
+                    bot.setText(helper1234);
+                    stuff.setText("");
+                }
+*/
+
+
+                if (stuffin.equalsIgnoreCase("Math")) {
+                    helper1234 = "What math course?";
+                    bot.setText(helper1234);
+                    stuff.setText("");
+                }
+                if (stuffin.equalsIgnoreCase("precalculus")) {
+                    helper1234 = "What precalculus topic?";
+                    bot.setText(helper1234);
+                    stuff.setText("");
+                }
+                if (stuffin.equalsIgnoreCase("right " + "triangle")) {
+                    helper1234 = "Please that this test to help us help you. " +
+                            "What is the sin of 30 degrees? Please write in decimals. (Hint: it is a decimal.)";
+                    bot.setText(helper1234);
+                    stuff.setText("");
+                }
+
+
+                if (stuffin.contains(".")) {
+                    if (stuffin.equalsIgnoreCase("0.5")) {
+                        helper1234 = "That is correct. The next question is: What is the arcsin of 1? " +
+                                "Please enter your answer in degrees and put degrees after the number. (Hint: it is a certain number of degrees.)";
+                        bot.setText(helper1234);
+                        stuff.setText("");
+                        corr = incorr;
+                        counter++;
+                    } else {
+                        helper1234 = "That is incorrect. The correct answer is 0.5. This is because sin is opposite over hypotenuse. " +
+                                "On the special right triangle, the sides are 1 as the shortest side, " +
+                                "square root 3 as the middle side, and 2 for the hypotenuse. " +
+                                "Since 30 degrees comes in between the middle side and the hypotenuse, " +
+                                "opposite over hypotenuse would give you 1/2 or 0.5. The next question is: What is the arcsin of 1? " +
+                                "Please answer in degrees and put degrees after the number. (Hint: it is a certain number of degrees.)";
+                        bot.setText(helper1234);
+                        stuff.setText("");
+                    }
+
+                }
+
+
+                if (stuffin.contains("degrees")) {
+                    if (stuffin.equals("90 " + "degrees")) {
+                        helper1234 = "That is correct. The next question is: What is the tan of 45 degrees? If it is a whole number, " +
+                                "please write int after the answer. (Hint: it is a whole number.)";
+                        bot.setText(helper1234);
+                        stuff.setText("");
+                        corr = incorr;
+                        counter++;
+                    } else {
+                        helper1234 = "That is incorrect. The correct answer is 90. This is because the sin of 90 creates 1. " +
+                                "If you graph it on the plane, you know that the y coordinate is sin and the sin of 90 comes out " +
+                                "to be 1. The next question is: What is the tan of 45 degrees? If it is a whole number, " +
+                                "please write int after the answer. (Hint: it is a whole number.)";
+                        bot.setText(helper1234);
+                        stuff.setText("");
+                    }
+                }  if (stuffin.contains("int")){
+                    if (stuffin.equals("1 " + "int")) {
+                        helper1234 = "That is correct." + "Please type enter to see your report.";
+                        bot.setText(helper1234);
+                        stuff.setText("");
+                        corr = incorr;
+                        counter++;
+                    } else {
+                        helper1234 = "That is incorrect. The correct answer is 1. This is because tan is opposite over adjacent. " +
+                                "The opposite of the 45 degree angle is 1 and the adjacent is also 1 which means " +
+                                "that the tan of 45 would be 1/1 or 1. Please type enter to see your report.";
+                        bot.setText(helper1234);
+                        stuff.setText("");
+                    }
+                }
+
+                if (stuffin.contains("enter")){
+                    helper1234 = "You got "  + counter +  " " + "correct.";
+                    bot.setText(helper1234);
+                    stuff.setText("");
+                }
+
+
+            }
+
+
 
 
 
@@ -328,7 +433,7 @@ public class Bot extends AppCompatActivity {
 
 
 
-        }
+
     });
 }
 }
