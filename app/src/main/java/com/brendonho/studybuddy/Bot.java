@@ -38,7 +38,7 @@ public class Bot extends AppCompatActivity {
         final Button science = (Button) findViewById(R.id.button6);
         final Button english = (Button) findViewById(R.id.button7);
         final Animation animation;
-        animation = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.scale_animator);
+                animation = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.scale_animator);
         bot.startAnimation(animation);
 
         math.setOnClickListener(new View.OnClickListener(){
@@ -163,11 +163,12 @@ public class Bot extends AppCompatActivity {
 
                 if (stuffin.contains("degrees")) {
                     if (stuffin.equals("90 " + "degrees")) {
+                        counter++;
                         helper1234 = "That is correct. The next question is: What is the tan of 45 degrees? If it is a whole number, " +
                                 "please write int after the answer. (Hint: it is a whole number.)";
                         bot.setText(helper1234);
                         stuff.setText("");
-                        counter++;
+
                     } else {
                         helper1234 = "That is incorrect. The correct answer is 90. This is because the sin of 90 creates 1. " +
                                 "If you graph it on the plane, you know that the y coordinate is sin and the sin of 90 comes out " +
