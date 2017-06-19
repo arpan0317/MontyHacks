@@ -55,15 +55,14 @@
             android:id="@+id/bot"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_above="@+id/you"
-            android:layout_alignStart="@+id/editText"
-            android:layout_marginBottom="75dp"
             android:background="@drawable/round_corner"
             android:backgroundTint="#009688"
             android:padding="20dp"
             android:textSize="17dp"
             android:text="What can I help you with? Please pick from math, science, or english."
-            android:textColor="#FFFFFF" />
+            android:textColor="#FFFFFF"
+            android:layout_above="@+id/button5"
+            android:layout_centerHorizontal="true" />
 
     <Button
         android:id="@+id/button2"
@@ -82,6 +81,33 @@
         android:layout_alignBottom="@+id/button2"
         android:layout_alignStart="@+id/bot"
         android:text="Random" />
+
+    <Button
+        android:id="@+id/button5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="22dp"
+        android:text="Math"
+        android:layout_marginBottom="20dp"
+        android:layout_above="@+id/you"
+        android:layout_alignStart="@+id/bot" />
+
+    <Button
+        android:id="@+id/button6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sceince"
+        android:layout_alignBaseline="@+id/button5"
+        android:layout_alignBottom="@+id/button5"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:id="@+id/button7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/button2"
+        android:layout_alignTop="@+id/button6"
+        android:text="English" />
 
 
 </RelativeLayout>

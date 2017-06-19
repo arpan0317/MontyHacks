@@ -34,9 +34,50 @@ public class Bot extends AppCompatActivity {
         final String link = "Here";
         Button over = (Button) findViewById(R.id.button2);
         Button ran = (Button) findViewById(R.id.button3);
+        final Button math = (Button) findViewById(R.id.button5);
+        final Button science = (Button) findViewById(R.id.button6);
+        final Button english = (Button) findViewById(R.id.button7);
         final Animation animation;
         animation = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.scale_animator);
         bot.startAnimation(animation);
+
+        math.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                String helper1234 = " ";
+                helper1234 = "What math course?";
+                bot.setText(helper1234);
+                stuff.setText("");
+                math.setVisibility(View.GONE);
+                science.setVisibility(View.GONE);
+                english.setVisibility(View.GONE);
+            }
+                                });
+        science.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                String helper1234 = " ";
+                helper1234 = "What science course?";
+                bot.setText(helper1234);
+                stuff.setText("");
+                math.setVisibility(View.GONE);
+                science.setVisibility(View.GONE);
+                english.setVisibility(View.GONE);
+            }
+        });
+
+        english.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                String helper1234 = " ";
+                helper1234 = "What english course?";
+                bot.setText(helper1234);
+                stuff.setText("");
+                math.setVisibility(View.GONE);
+                science.setVisibility(View.GONE);
+                english.setVisibility(View.GONE);
+            }
+        });
 
         over.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -45,6 +86,9 @@ public class Bot extends AppCompatActivity {
                 helper1234 = "What can I help you with? Please pick from math, science, or english.";
                 bot.setText(helper1234);
                 stuff.setText("");
+                math.setVisibility(View.VISIBLE);
+                science.setVisibility(View.VISIBLE);
+                english.setVisibility(View.VISIBLE);
             }
                                 });
 
@@ -83,11 +127,6 @@ public class Bot extends AppCompatActivity {
 
 
 
-                if (stuffin.equalsIgnoreCase("Math")) {
-                    helper1234 = "What math course?";
-                    bot.setText(helper1234);
-                    stuff.setText("");
-                }
                 if (stuffin.equalsIgnoreCase("precalculus")) {
                     helper1234 = "What precalculus topic? Please pick from right triangle or degrees and radians.";
                     bot.setText(helper1234);
