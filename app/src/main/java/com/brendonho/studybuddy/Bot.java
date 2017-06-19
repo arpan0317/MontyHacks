@@ -32,11 +32,40 @@ public class Bot extends AppCompatActivity {
         final TextView you = (TextView) findViewById(R.id.you);
         final TextView bot = (TextView) findViewById(R.id.bot);
         final String link = "Here";
+        Button over = (Button) findViewById(R.id.button2);
+        Button ran = (Button) findViewById(R.id.button3);
         final Animation animation;
         animation = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.scale_animator);
         bot.startAnimation(animation);
 
+        over.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v){
+                String helper1234 = " ";
+                helper1234 = "What can I help you with? Please pick from math, science, or english.";
+                bot.setText(helper1234);
+                stuff.setText("");
+            }
+                                });
 
+        ran.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String helper1234 = " ";
+                int ran = 1 + (int)(Math.random() * (2));
+                if (ran == 1){
+                    helper1234 = "Please that this test to help us help you. " +
+                            "What is the sin of 30 degrees? Please write in decimals. (Hint: it is a decimal.)";
+                    bot.setText(helper1234);
+                    stuff.setText("");
+                } else if (ran == 2){
+                    helper1234 = "Please that this test to help us help you. " +
+                            "What is pi radians in degrees? Please write degreee after the answer.";
+                    bot.setText(helper1234);
+                    stuff.setText("");
+                }
+            }
+                               });
 
         send.setOnClickListener(new View.OnClickListener() {
             @Override
